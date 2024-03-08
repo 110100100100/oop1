@@ -36,13 +36,13 @@ class Dog extends Animal {
     }
 
     public void makeSound() {
-        System.out.println(getName() + " đang sủa rất to.");
-        System.out.println(getName() + " hiện đang " + getAge() + " tuổi");
+        System.out.println(getName() + " say Gou Gou");
+        System.out.println(getName() + " is " + getAge() + " years");
     }
 
     public void move() {
-        System.out.println(getName() + " đang chạy.");
-        System.out.println("--------------------------");
+        System.out.println(getName() + " running");
+
     }
 }
 
@@ -53,13 +53,13 @@ class Cat extends Animal {
 
     @Override
     public void makeSound() {
-        System.out.println(getName() + " đang nya~.");
-        System.out.println(getName() + " hiện đang " + getAge() + " tuổi");
+        System.out.println(getName() + " say Meow moew");
+        System.out.println(getName() + " is " + getAge() + " years");
     }
 
     public void move() {
-        System.out.println(getName() + " đang chạy.");
-        System.out.println("--------------------------");
+        System.out.println(getName() + " running");
+
     }
 }
 
@@ -70,12 +70,25 @@ class Bird extends Animal {
 
     @Override
     public void makeSound() {
-        System.out.println(getName() + " đang hót.");
-        System.out.println(getName() + " hiện đang " + getAge() + " tuổi");
+        System.out.println(getName() + " is singing now");
+        System.out.println(getName() + " is " + getAge() + " years");
     }
 
     public void move() {
-        System.out.println(getName() + " đang bay.");
-        System.out.println("--------------------------");
+        System.out.println(getName() + " flying" );
+
+    }
+}
+class AnimalMain{
+    public static void main(String[] args) {
+        Dog dog = new Dog("Dog", 2);
+        Cat cat = new Cat("Cat", 3);
+        Bird bird = new Bird("Bird", 4);
+        dog.makeSound();
+        dog.move();
+        cat.makeSound();
+        cat.move();
+        bird.makeSound();
+        bird.move();
     }
 }
